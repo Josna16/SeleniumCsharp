@@ -23,8 +23,6 @@ public class First{
     public void Close(){
         if (driver != null)
         {
-            // driver.Quit();
-            // driver.Dispose();
             sel.Close(driver);
         }
     }
