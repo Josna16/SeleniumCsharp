@@ -102,3 +102,4 @@ C:\Users\Josna Baby\SeleniumC#\obj\Debug\net8.0\refint\SeleniumC#.dll
 C:\Users\Josna Baby\SeleniumC#\obj\Debug\net8.0\SeleniumC#.pdb
 C:\Users\Josna Baby\SeleniumC#\obj\Debug\net8.0\SeleniumC#.genruntimeconfig.cache
 C:\Users\Josna Baby\SeleniumC#\obj\Debug\net8.0\ref\SeleniumC#.dll
+C:\Users\Josna Baby\SeleniumC#\obj\Debug\net8.0\SeleniumC#.sourcelink.json
