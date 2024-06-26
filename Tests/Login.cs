@@ -13,6 +13,7 @@ public class First{
     {
         sel = new SelHelpers();
         driver = new ChromeDriver();
+        //Logger.TestContext = TestContext.CurrentContext;
         homePageObj = new(driver);
         sel.LaunchUrl(driver);
     }
@@ -22,9 +23,11 @@ public class First{
     {
         // IWebElement login =  driver.FindElement(By.XPath("//*[contains(text(), 'Sign In')]"));
         // login.Click();
-        // IWebElement heading = driver.FindElement(By.TagName("h1"));
-        // TestContext.Progress.WriteLine(heading.GetAttribute("text"));
+        IWebElement heading = driver.FindElement(By.TagName("h1"));
+        //TestContext.Out.WriteLine("Hi");
         homePageObj.ClickOnSignIn();
+        //Logger.TestContext = TestContext.CurrentContext;
+        Logger.LogInfo("Log In Page");
         //string expected = "True";
         //NUnit.Framework.Assert.AreEqual(expected, "True");
         //Assert.AreEqual(homePageObj.ValidateSignInPage(), "True");
