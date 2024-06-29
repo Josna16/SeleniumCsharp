@@ -13,28 +13,28 @@ public class First{
     {
         sel = new SelHelpers();
         driver = new ChromeDriver();
-        //Logger.TestContext = TestContext.CurrentContext;
-        homePageObj = new(driver);
+        homePageObj = new HomePage(driver);
         sel.LaunchUrl(driver);
     }
 
     [Test]
     public void ValidLogin()
     {
-        // IWebElement login =  driver.FindElement(By.XPath("//*[contains(text(), 'Sign In')]"));
-        // login.Click();
-        IWebElement heading = driver.FindElement(By.TagName("h1"));
-        //TestContext.Out.WriteLine("Hi");
+        Logger.LogInfo("Click on the signin button in the home page.");
         homePageObj.ClickOnSignIn();
-        //Logger.TestContext = TestContext.CurrentContext;
-        Logger.LogInfo("Log In Page");
-        //string expected = "True";
-        //NUnit.Framework.Assert.AreEqual(expected, "True");
-        //Assert.AreEqual(homePageObj.ValidateSignInPage(), "True");
+        Logger.LogInfo("Validate that user is navigated to the signin page.");
+        Assert.That(homePageObj.ValidateSignInPage(), Is.True, "User is navigated to the signin page.");
+        homePageObj.EnterLoginCredentials("jsmith", "Demo1234");
+        Assert.That(homePageObj.ValidateUserIsSignedIn(), Is.True, "User is sucessfully loged in.");
     }
     [Test]
     public void InvalidLogin(){
-        TestContext.Out.WriteLine("Invalid");
+        Logger.LogInfo("Click on the signin button in the home page.");
+        homePageObj.ClickOnSignIn();
+        Logger.LogInfo("Validate that user is navigated to the signin page.");
+        Assert.That(homePageObj.ValidateSignInPage(), Is.True, "User is navigated to the signin page.");
+        homePageObj.EnterLoginCredentials("invalid", "invalid");
+        Assert.That(homePageObj.ValidateInvalidSignIn(), Is.True, "The login failed message is displayed.");
     }
 
     [TearDown]

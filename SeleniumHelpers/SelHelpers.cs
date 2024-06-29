@@ -4,6 +4,7 @@ namespace SeleniumHelpers{
         //IWebDriver driver;
         public void LaunchUrl(IWebDriver driver){
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds((int)3000);
+            Logger.LogInfo("Launching the browser with the test url.");
             driver.Navigate().GoToUrl("http://demo.testfire.net/");
             driver.Manage().Window.Maximize();
         }

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SeleniumC#")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8713b182e3780be9d474342289afc5675c7d267f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2005405e05eb990dd82d790636cf347703c563b0")]
 [assembly: System.Reflection.AssemblyProductAttribute("SeleniumC#")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SeleniumC#")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
